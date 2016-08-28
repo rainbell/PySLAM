@@ -1,0 +1,10 @@
+A Brief Introduction to PySLAM
+
+This is a simple implementation of typical SLAM process in python based on laser radar data, which mainly includes three parts:
+1.a map reader: input the map information including node coordinates, boundary lines and the trajectory of the robot
+2.a simulative radar data generator: use the geometry relationship to calculate the point cloud by adding error of normal distribution
+3.the SLAM process: get line feature from the data point and match it with the global map generated before to calculte the position of the robot
+
+The feature extraction and robot position calculation part has taken the algorithm and cpp code in Anonymousrookie's csdn blog (http://blog.csdn.net/anonymousrookie/article/details/46507825&6342174) as a main reference.
+
+Although it's just a simulative tool program, it can be further used in real 2D SLAM problems. And with system input such as the velocity or displacement of the robot, EKF or optimization method could be added to extend its function.
